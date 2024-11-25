@@ -344,44 +344,51 @@ header .navbar ul li a:hover {
 /* hero media queries ends*/
 /* hero section end */
 
+ 
 .about {
   background: rgb(255, 255, 255);
 }
-
+ 
 .about .row {
   display: grid;
-  grid-template-columns: 1fr 2fr; /* Set image to 1/3 and content to 2/3 */
+  grid-template-columns: 25% 75%; /* Set video to 25% and content to 75% */
   gap: 2rem;
   padding: 4rem;
 }
-
+ 
 .about .row .image {
   text-align: center;
   position: relative;
 }
-
-.about .row .image img {
-  width: 100%;
+ 
+ 
+.about .row .image video {
+  width: 100%; /* Make video take full width of 25% */
   border-radius: 5%;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+  transition: 0.3s;
+  cursor: pointer;
+  filter: brightness(0.7); /* Apply color adjustment to video */
 }
-
+ 
+ 
+ 
 .about .row .content {
   padding: 3rem;
 }
-
+ 
 .about .row .content h3 {
   color: rgb(27, 27, 27);
   font-size: 2.5rem;
 }
-
+ 
 .about .row .content .tag {
   font-size: 1.4rem;
   color: #020133;
   font-weight: 600;
   margin-top: 1rem;
 }
-
+ 
 .about .row .content p {
   font-size: 1.5rem;
   margin-top: 1.5rem;
@@ -389,7 +396,7 @@ header .navbar ul li a:hover {
   font-weight: 600;
   text-transform: none;
 }
-
+ 
 .about .row .content .box-container {
   display: flex;
   flex-wrap: wrap;
@@ -397,14 +404,73 @@ header .navbar ul li a:hover {
   font-family: "Nunito";
   font-weight: 600;
 }
-
+ 
 .about .row .content .box-container .box p {
   text-transform: none;
 }
-
+ 
 .about .row .content .box-container .box p span {
   color: #011aff;
 }
+ 
+.resumebtn {
+  margin-top: 6rem;
+}
+ 
+.resumebtn .btn {
+  padding: 1.7rem 3rem;
+  border-radius: 0.5em;
+  transition: 0.3s;
+  color: #fff;
+  background: #2506ad;
+  box-shadow: 0px 5px 10px rgba(48, 68, 247, 0.6);
+  font-family: "Nunito", sans-serif;
+}
+ 
+.resumebtn .btn span {
+  font-weight: 600;
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+}
+ 
+.resumebtn .btn i {
+  margin-left: 0.3rem;
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+ 
+.resumebtn .btn:hover {
+  background: #1a047e;
+}
+ 
+.resumebtn .btn:hover i {
+  transform: translateX(5px);
+}
+ 
+/* about media queries starts */
+@media screen and (max-width: 600px) {
+  .about .row {
+    grid-template-columns: 1fr; /* Stack video and content on small screens */
+    padding: 1rem;
+  }
+ 
+  .about .row .image {
+    margin: 0 auto;
+    width: 80%;
+  }
+ 
+  .about .row .content {
+    padding: 1rem;
+  }
+ 
+  .about .row .content .box-container {
+    gap: 0;
+  }
+}
+/* about media queries ends */
+ 
+ 
+ 
 
 .resumebtn {
   margin-top: 6rem;
